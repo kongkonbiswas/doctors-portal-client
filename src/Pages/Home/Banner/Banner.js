@@ -19,26 +19,41 @@ const verticalCenter = {
 
 const Banner = () => {
     return (
-        <Container style={bannerBg} sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-                <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={6}>
-                    <Box>
-                        <Typography variant="h3">
-                            Your New Smile <br />
-                            Starts Here
-                        </Typography>
-                        <Typography variant="h6" sx={{ my: 3, fontSize: 13, fontWeight: 300, color: 'gray' }}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil asperiores velit illum enim incidunt doloremque vitae impedit at accusantium tenetur.
-                        </Typography>
-                        <Button variant="contained" style={{ backgroundColor: '#5CE7ED' }}>Get Appointment</Button>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={6} style={verticalCenter} >
-                    <img style={{ width: '350px' }} src={chair} alt="" />
-                </Grid>
-
-            </Grid>
-        </Container>
+      <Container style={bannerBg} sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid
+            item
+            style={{ ...verticalCenter, textAlign: "left" }}
+            xs={12}
+            md={6}
+          >
+            <Box>
+              <Typography variant="h3">
+                Your New Smile <br />
+                Starts Here
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ my: 3, fontSize: 13, fontWeight: 300, color: "gray" }}
+              >
+                Drones will try to fly from Drone Ports to other Drone Ports as
+                straight as possible. When terrain is in the path, the Drone
+                will try to avoid the object. To path, Drones uses a 64 x 64
+                grid of the world to generate their path.
+              </Typography>
+              <Button
+                variant="contained"
+                style={{ backgroundColor: "#5CE7ED" }}
+              >
+                Get Services
+              </Button>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6} style={verticalCenter}>
+            <img style={{ width: "350px" }} src={chair} alt="" />
+          </Grid>
+        </Grid>
+      </Container>
     );
 };
 

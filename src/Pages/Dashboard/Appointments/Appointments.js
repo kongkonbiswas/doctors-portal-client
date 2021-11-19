@@ -13,7 +13,9 @@ const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([])
 
     useEffect(() => {
-        const url = `https://stark-caverns-04377.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url = `http://localhost:5000/appointments?email=${
+          user.email
+        }&date=${date.toLocaleDateString()}`;
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
@@ -25,7 +27,7 @@ const Appointments = ({ date }) => {
 
     return (
         <div>
-            <h2>Appointments: {appointments.length}</h2>
+            <h2>Products: {appointments.length}</h2>
             <TableContainer component={Paper}>
                 <Table sx={{}} aria-label="Appointments table">
                     <TableHead>

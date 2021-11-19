@@ -9,22 +9,25 @@ import cavity from '../../../images/cavity.png';
 import whitening from '../../../images/whitening.png';
 
 const services = [
-    {
-        name: 'Fluoride Treatment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: fluoride
-    },
-    {
-        name: 'Cavity Filling',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: cavity
-    },
-    {
-        name: 'Teeth Whitening',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: whitening
-    }
-]
+  {
+    name: "DJI",
+    description:
+      "SZ DJI Technology Co., Ltd. or Shenzhen DJI Sciences and Technologies Ltd. in full, more popularly known as its trade name DJI, which stands for Da-Jiang Innovations, is a Chinese technology company headquartered in Shenzhen, Guangdong, with manufacturing facilities throughout the world.",
+    img: fluoride,
+  },
+  {
+    name: "AirSwift Drowns",
+    description:
+      "As said earlier, your newborn baby as in your company should have a good name so that it can be able to attract more and more people. So, here presenting a new list of the company name and you must check them out. ",
+    img: cavity,
+  },
+  {
+    name: "Edge Drones",
+    description:
+      "Built-In Barometric and Optical Flow Sensors constantly monitor the environment, making microscopic adjustments to the drone's position, ensuring smooth and precise flight.",
+    img: whitening,
+  },
+];
 
 
 const Services = () => {

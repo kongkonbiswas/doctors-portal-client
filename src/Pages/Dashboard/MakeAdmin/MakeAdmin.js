@@ -12,21 +12,21 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://stark-caverns-04377.herokuapp.com/users/admin', {
-            method: 'PUT',
-            headers: {
-                'authorization': `Bearer ${token}`,
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
+        fetch("http://localhost:5000/users/admin", {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${token}`,
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(user),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount) {
-                    console.log(data);
-                    setSuccess(true);
-                }
-            })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.modifiedCount) {
+              console.log(data);
+              setSuccess(true);
+            }
+          });
 
         e.preventDefault()
     }
