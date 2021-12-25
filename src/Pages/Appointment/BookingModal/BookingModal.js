@@ -21,7 +21,7 @@ const style = {
 };
 
 const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBookingSuccess }) => {
-    const { name, time } = booking;
+    const { name, time, price } = booking;
     const { user } = useAuth();
     const initialInfo = { patientName: user.displayName, email: user.email, phone: '' }
     const [bookingInfo, setBookingInfo] = useState(initialInfo);
@@ -39,24 +39,25 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
         const appointment = {
             ...bookingInfo,
             time,
+            price,
             serviceName: name,
             date: date.toLocaleDateString()
         }
         // send to the server
-        fetch('http://localhost:5000/appointments', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(appointment)
+        fetch("http://localhost:5000/appointments", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(appointment),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    setBookingSuccess(true);
-                    handleBookingClose();
-                }
-            });
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              setBookingSuccess(true);
+              handleBookingClose();
+            }
+          });
 
         e.preventDefault();
     }

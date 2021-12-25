@@ -25,9 +25,9 @@ const Navigation = () => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Drone MarketPlace
+                        Doctors Portal
                     </Typography>
-                    <Link to="/appointment"><Button style={{ color: 'white' }}  color="inherit">Explore</Button></Link>
+                    <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
                     {
                         user?.email ?
                             <Box>

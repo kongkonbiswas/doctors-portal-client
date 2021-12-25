@@ -5,39 +5,45 @@ import Booking from '../Booking/Booking';
 const bookings = [
   {
     id: 1,
-    name: "SANROCK U52",
-    time: "FLY TIME 30-45 MINUTES",
-    space: 12,
+    name: "Teeth Orthodonics",
+    time: "08.00 AM - 09.00 AM",
+    price: 17,
+    space: 10,
   },
   {
     id: 2,
-    name: "ZENFOLT XPA7",
-    time: "FLY TIME 60-70 MINUTES",
+    name: "Cosmetic Dentistry",
+    time: "09.00 AM - 10.00 AM",
+    price: 23,
     space: 8,
   },
   {
     id: 3,
-    name: "IOKUKI M11",
-    time: "FLY TIME 50 MINUTES",
+    name: "Teeth Cleaning",
+    time: "10.00 AM - 11.00 AM",
+    price: 35,
     space: 9,
   },
   {
     id: 4,
-    name: "UranHub Foldable GPS",
-    time: "FLY TIME 35 MINUTES",
+    name: "Cavity Protection",
+    time: "11.00 AM - 12.00 PM",
+    price: 26,
     space: 5,
   },
   {
     id: 5,
-    name: "SANROCK U52",
-    time: "FLY TIME 29 MINUTES",
+    name: "Pediatric Dental",
+    time: "06.00 PM - 07.00 PM",
+    price: 21,
     space: 10,
   },
   {
     id: 6,
-    name: "SANROCK H859",
-    time: "FLY TIME 35 MINUTES",
-    space: 16,
+    name: "Oral Surgery",
+    time: "07.00 PM - 08.00 PM",
+    price: 19,
+    space: 10,
   },
 ];
 
@@ -45,8 +51,8 @@ const AvailableAppointments = ({ date }) => {
     const [bookingSuccess, setBookingSuccess] = useState(false);
     return (
         <Container>
-            <Typography variant="h4" sx={{ color: 'info.main', mb: 3 }}>Available Products on {date.toDateString()}</Typography>
-            {bookingSuccess && <Alert severity="success">Your Products Booked successfully!</Alert>}
+            <Typography variant="h4" sx={{ color: 'info.main', mb: 3 }}>Available Appointments on {date.toDateString()}</Typography>
+            {bookingSuccess && <Alert severity="success">Appointment Booked successfully!</Alert>}
             <Grid container spacing={2}>
                 {
                     bookings.map(booking => <Booking
